@@ -59,7 +59,7 @@ class Song
     inst = self.new_from_filename(file_name)
     inst.save
   end
-  
+
   def self.destroy_all
     @@all.clear
   end
