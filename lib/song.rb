@@ -60,6 +60,7 @@ class Song
   def self.create_from_filename(file_name)
     inst = self.new_from_filename(file_name)
     inst.save
+    inst
   end
 
   def self.destroy_all
