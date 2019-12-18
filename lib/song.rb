@@ -18,11 +18,13 @@ class Song
   end
 
   def self.new_by_name(name)
-
+    inst = self.new
+    inst.name = name
+    inst
   end
 
   def self.create_by_name(name)
-
+    
   end
 
   def self.find_by_name(name)
@@ -42,6 +44,6 @@ class Song
   end
 
   def self.destroy_all
-    self.clear
+    @@all.clear
   end
 end
