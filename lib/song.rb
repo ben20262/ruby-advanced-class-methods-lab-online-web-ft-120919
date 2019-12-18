@@ -24,8 +24,9 @@ class Song
   end
 
   def self.create_by_name(name)
-    inst = self.create
+    inst = self.new
     inst.name = name
+    inst.save
     inst
   end
 
