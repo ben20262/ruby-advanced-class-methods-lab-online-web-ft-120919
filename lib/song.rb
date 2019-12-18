@@ -49,10 +49,17 @@ class Song
     @@all.sort_by {|a| a.name}
   end
 
-  def self.new_from_filename(name)
-
+  def self.new_from_filename(file_name)
+    inst = self.new
+    isnt.artist_name = file_name.chomp(".mp3").split(" - ")[0]
+    isnt.name = file_name.chomp(".mp3").split(" - ")[1]
   end
 
+  def self.create_from_filename(file_name)
+    inst = self.new_from_filename(file_name)
+    inst.save
+  end
+  
   def self.destroy_all
     @@all.clear
   end
