@@ -12,7 +12,7 @@ class Song
 
   def self.create
     inst = self.new
-    @@all << inst
+    save
     inst
   end
 end
