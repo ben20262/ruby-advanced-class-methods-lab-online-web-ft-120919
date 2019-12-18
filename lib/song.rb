@@ -26,7 +26,7 @@ class Song
   def self.create_by_name(name)
     inst = self.new
     inst.name = name
-    inst.save
+    @@all << inst
     inst
   end
 
